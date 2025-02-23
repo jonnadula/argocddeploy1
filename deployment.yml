@@ -3,22 +3,22 @@ kind: Deployment
 metadata:
   creationTimestamp: null
   labels:
-    app: myd
-  name: myd
+    app: myweb1
+  name: myweb1
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
-      app: myd
+      app: myweb1
   strategy: {}
   template:
     metadata:
       creationTimestamp: null
       labels:
-        app: myd
+        app: myweb1
     spec:
       containers:
-      - image: vimal13/lw:v1
+      - image: vimal13/lw:v2
         name: lw
         resources: {}
 status: {}
